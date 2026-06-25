@@ -1,103 +1,42 @@
-## Media Frame
-
-## What is this?
-
-Media Frame turns a tablet into a clean **Now Playing** screen for your music and video setup.
-
-You get:
-- big cover art and clear text
-- simple playback controls on tap
-- a calm idle screen with slideshow and/or clock
-
-It is built for landscape Android tablets and works well in a living room, listening room, home cinema room, or store demo setup.
-
----
-
-## Highlights
-
-- **Beautiful now-playing view**
-  Large artwork, readable text, smooth transitions.
-
-- **One screen for multiple sources**
-  Works with **Roon**, **Spotify**, **Apple TV**, **Google Cast**, **WiiM** (experimental), **Lyssna själv** (ShazamKit), and **MSI Afterburner** FPS telemetry. You choose source priority in Setup.
-
-- **Separate look for music and video**
-  **Utseende → Musikappar** and **Utseende → Videoappar** are independent — music backdrop sliders do not control Apple TV / Plex video backgrounds (and vice versa).
-
-- **Optional music video background**
-  For music from Roon/Spotify, you can show a muted YouTube video in the background instead of a static backdrop.
-
-- **Simple Apple TV setup flow**
-  Scan, select, pair once with PIN, then use it as a normal source.
-
-- **Idle screen that still looks alive**
-  Decorative frame art, slideshow, clock, and a compact connection status area.
-
-- **Control from browser / Home Assistant**
-  Built-in LAN web control and REST control are available on Android builds.
-
----
-
-## Connected apps
-
-### Roon
-Enable Roon, connect to Core, choose auto/manual zone behavior.
-
-### Spotify
-- **Last.fm mode** (follow Last.fm now-playing)
-
-### Apple TV
-Scan devices, pick Apple TV, pair with PIN, then verify connection.
-
-### Google Cast
-Discover Chromecast / Poll now-playing from connected Cast targets.
-
-### WiiM
-LAN discovery and now-playing from compatible WiiM streamers (HTTPS to device API).
-
-### Naim
-LAN discovery and now-playing from compatible Naim streamers (HTTPS to device API).
-
-### Eversolo (EXPERIMENTAL!)
-LAN discovery and now-playing from compatible Eversolo streamers (HTTPS to device API).
-
-### Shazam
-Identify what the tablet microphone hears; for example use it as a "source" for vinyl players at home or just when you don't feel like configuriing anything!
-
-### MSI Afterburner
-FPS and game telemetry from a Windows PC running MSI Afterburner Remote Server
-
-### Home Assistant / Web control
-Enable local web control and REST control from your network.
-Useful for automations and external control pages.
-
----
-
-## Appearance
-
-You can style **Music** and **Video** separately.
-
-### Music
-- choose backdrop source
-- corner cover position + size
-- **Album cover style:** **Standard** (flat artwork in the corner) or **Vinyl animation**
-- title/artist size (**smaller than default** option, default, +10%, +25%), alignment
-- visualizer options 
-
-### Video (Apple TV)
-- Simple / Advanced layout
-- Simple: Plex / source poster; Advanced: Fanart
-- optional app logo in corner
-- title/episode layout controls
-- advanced video backgrounds
-
----
-
-## Screensaver and idle behavior
-
-When nothing is playing, you can show:
-- slideshow
-- clock
-- slideshow + clock
-
-You can choose image folder, scaling mode, idle delay, and seconds per image.
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">What is this?</h2><a id="user-content-what-is-this" class="anchor" aria-label="Permalink: What is this?" href="https://github.com/Gripen77/Media-Frame#what-is-this"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Media Frame turns a tablet into a clean <strong>Now Playing</strong> screen for your music and video setup.</p>
+<p dir="auto">You get:</p>
+<ul dir="auto">
+<li>big cover art and clear text</li>
+<li>simple playback controls on tap</li>
+<li>a calm idle screen with slideshow and/or clock</li>
+</ul>
+<p dir="auto">It is built for landscape Android tablets and works well in a living room, listening room, home cinema room, or store demo setup.</p>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Highlights</h2><a id="user-content-highlights" class="anchor" aria-label="Permalink: Highlights" href="https://github.com/Gripen77/Media-Frame#highlights"><svg data-component="Octicon" class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li>
+<p dir="auto"><strong>Beautiful now-playing view</strong>
+Large artwork, readable text, smooth transitions.</p>
+</li>
+<li>
+<p dir="auto"><strong>One screen for multiple sources</strong>
+Works with <strong>Roon</strong>, <strong>Spotify</strong>, <strong>Apple TV</strong>, <strong>Google Cast</strong>, <strong>WiiM</strong> (experimental), <strong>Lyssna själv</strong> (ShazamKit), and <strong>MSI Afterburner</strong> FPS telemetry. You choose source priority in Setup.</p>
+</li>
+<li>
+<p dir="auto"><strong>Separate look for music and video</strong>
+<strong>Utseende → Musikappar</strong> and <strong>Utseende → Videoappar</strong> are independent — music backdrop sliders do not control Apple TV / Plex video backgrounds (and vice versa).</p>
+</li>
+<li>
+<p dir="auto"><strong>Optional music video background</strong>
+For music from Roon/Spotify, you can show a muted YouTube video in the background instead of a static backdrop.</p>
+</li>
+<li>
+<p dir="auto"><strong>Simple Apple TV setup flow</strong>
+Scan, select, pair once with PIN, then use it as a normal source.</p>
+</li>
+<li>
+<p dir="auto"><strong>Idle screen that still looks alive</strong>
+Decorative frame art, slideshow, clock, and a compact connection status area.</p>
+</li>
+<li>
+<p dir="auto"><strong>Control from browser / Home Assistant</strong>
+Built-in LAN web control and REST control are available on Android builds.</p>
+</li>
+</ul>
+<hr>
