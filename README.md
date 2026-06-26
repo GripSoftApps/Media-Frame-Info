@@ -1,82 +1,33 @@
-<h2 id="what-is-this">What is this?</h2>
+Media Frame transforms your tablet into a beautiful, customizable "Now Playing" display for your music, movies, TV shows, and gaming setup. Whether it's mounted on a wall, placed in a picture frame, or integrated into your media furniture, Media Frame brings your entertainment to life.
 
-<p>
-Media Frame turns a tablet into a clean <strong>Now Playing</strong> screen for your music and video setup.
-</p>
+Highlights
 
-<p>You get:</p>
+• Beautiful, fully customizable Now Playing display.
 
-<ul>
-<li>big cover art and clear text</li>
-<li>simple playback controls on tap</li>
-<li>a calm idle screen with slideshow and/or clock</li>
-</ul>
+• Large artwork, readable text, and fullscreen animations.
 
-<p>
-It is built for landscape Android tablets and works well in a living room,
-listening room, home cinema room, or store demo setup.
-</p>
+• Works with Roon, Spotify, Apple TV, Google Cast devices, WiiM, Naim (experimental), and Eversolo (experimental).
 
+• Rich artwork and metadata for music, movies, and TV shows. Apple TV integration displays beautiful custom artwork together with information about the content you're watching.
 
-<hr>
+• Turn your tablet into a gaming dashboard with live FPS, CPU, GPU, and system telemetry using MSI Afterburner / RivaTuner Statistics Server (RTSS) integration.
 
+• Identifies what's playing using the built-in microphone (powered by ShazamKit)—perfect for vinyl lovers or just people who dont want to configure stuff!
 
-<h2 id="highlights">Highlights</h2>
+• An elegant idle screen that still feels alive with decorative artwork, slideshows, clocks, and your own custom images.
 
+• Custom Adaptive Brightness automatically adjusts the display to blend naturally into your room like a real picture frame. Fine-tune the behavior to perfectly match your environment under each specific lighting condition.
 
-<ul>
+• Night Mode automatically turns the display off during user-defined hours whenever nothing is playing, reducing power consumption and extending display lifespan. As well as letting you sleep without any annoying light sources.
 
-<li>
-<strong>Beautiful now-playing view</strong><br>
-Large artwork, readable text, smooth transitions.
-</li>
+• Adjustable View Area lets you resize the visible content to perfectly fit picture frames, custom enclosures, media furniture, or any creative installation.
 
+• Kiosk Mode creates a dedicated appliance-like experience by hiding Android system elements and using Media Frame's built-in keyboard—so there's rarely any reason to leave the app.
 
-<li>
-<strong>One screen for multiple sources</strong><br>
-Works with <strong>Roon</strong>, <strong>Spotify</strong>, 
-<strong>Apple TV</strong>, <strong>Google Cast</strong>, 
-<strong>WiiM</strong> (experimental), 
-<strong>Lyssna själv</strong> (ShazamKit), and 
-<strong>MSI Afterburner</strong> FPS telemetry.
-You choose source priority in Setup.
-</li>
+• Control Media Frame from any web browser on your local network and see changes instantly. Group multiple devices and sync settings between them!
 
+• No ads. No subscriptions. Just your content.
 
-<li>
-<strong>Separate look for music and video</strong><br>
-<strong>Utseende → Musikappar</strong> and 
-<strong>Utseende → Videoappar</strong> are independent —
-music backdrop sliders do not control Apple TV / Plex video backgrounds (and vice versa).
-</li>
+• Designed with privacy in mind. Most integrations work entirely within your local network. No spying, no user data collection!
 
-
-<li>
-<strong>Optional music video background</strong><br>
-For music from Roon/Spotify, you can show a muted YouTube video
-in the background instead of a static backdrop.
-</li>
-
-
-<li>
-<strong>Simple Apple TV setup flow</strong><br>
-Scan, select, pair once with PIN, then use it as a normal source.
-</li>
-
-
-<li>
-<strong>Idle screen that still looks alive</strong><br>
-Decorative frame art, slideshow, clock, and a compact connection status area.
-</li>
-
-
-<li>
-<strong>Control from browser / Home Assistant</strong><br>
-Built-in LAN web control and REST control are available on Android builds.
-</li>
-
-</ul>
-
-
-</body>
-</html>
+...and more!
