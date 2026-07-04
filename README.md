@@ -6,7 +6,7 @@ Highlights
 
 • Large artwork, readable text, and fullscreen animations.
 
-• Works with Roon, Spotify, Apple TV, Google Cast devices, WiiM, Naim (experimental), and Eversolo (experimental).
+• Works with Roon, Spotify, Apple TV, Google Cast devices, WiiM, Home Assistant, Naim (experimental), and Eversolo (experimental).
 
 • Identifies what's playing using the built-in microphone (powered by ShazamKit)—perfect for vinyl lovers or just people who dont want to configure stuff!
 
@@ -31,3 +31,5 @@ Highlights
 • Designed with privacy in mind. Most integrations work entirely within your local network. No spying, no user data collection!
 
 ...and more!
+
+Get it on Google Play Store : https://play.google.com/store/apps/details?id=com.anonymous.mediaframe
