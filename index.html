@@ -4,59 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Frame</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .app-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        p.subtitle {
+            color: #bbbbbb;
+            margin-top: 10px;
+        }
+
+        h3 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #1b1b1b;
+            padding: 15px 18px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .play-badge {
+            height: 60px;
+            transition: transform 0.2s ease;
+        }
+
+        .play-badge:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<h2>Media Frame</h2>
+<div class="container">
 
-<p>
-    Media Frame transforms your tablet into a beautiful, customizable
-    <strong>"Now Playing"</strong> display for your music, movies, TV shows,
-    and gaming setup. Whether it's mounted on a wall, placed in a picture
-    frame, or integrated into your media furniture, Media Frame brings your
-    entertainment to life.
-</p>
+    <!-- HEADER -->
+    <div class="header">
+        <!-- Byt till din riktiga ikon -->
+        <img class="app-logo" src="logo.png" alt="Media Frame logo">
 
-<h3>Highlights</h3>
+        <h1>Media Frame</h1>
 
-<ul>
-    <li>Beautiful, fully customizable <strong>Now Playing</strong> display.</li>
+        <p class="subtitle">
+            Turn your tablet into a beautiful Now Playing display
+        </p>
+    </div>
 
-    <li>Large artwork, readable text, and fullscreen animations.</li>
+    <!-- DESCRIPTION -->
+    <p>
+        Media Frame transforms your tablet into a customizable "Now Playing" display for music, movies, TV shows, and gaming.
+        Designed for wall mounting, frames, or media furniture setups.
+    </p>
 
-    <li>Works with Roon, Spotify, Apple TV, Google Cast devices, WiiM, Home Assistant, Naim (experimental), and Eversolo (experimental).</li>
+    <!-- HIGHLIGHTS -->
+    <h3>Highlights</h3>
 
-    <li>Identifies what's playing using the built-in microphone (powered by ShazamKit)—perfect for vinyl lovers or people who don't want to configure anything.</li>
+    <ul>
+        <li>Beautiful, fully customizable Now Playing display.</li>
 
-    <li>Rich artwork and metadata for music, movies, and TV shows. Apple TV integration displays beautiful custom artwork together with information about the content you're watching.</li>
+        <li>Large artwork, readable text, and fullscreen animations.</li>
 
-    <li>Turn your tablet into a gaming dashboard with live FPS, CPU, GPU, and system telemetry using MSI Afterburner / RivaTuner Statistics Server (RTSS) integration.</li>
+        <li>Works with Roon, Spotify, Apple TV, Google Cast, WiiM, Home Assistant, Naim (experimental), Eversolo (experimental).</li>
 
-    <li>An elegant idle screen that still feels alive with decorative artwork, slideshows, clocks, and your own custom images.</li>
+        <li>Built-in microphone identification via ShazamKit — perfect for vinyl setups.</li>
 
-    <li>Custom Adaptive Brightness automatically adjusts the display to blend naturally into your room like a real picture frame. Fine-tune the behavior to perfectly match your environment under each specific lighting condition.</li>
+        <li>Rich metadata and artwork for music, movies, and TV shows.</li>
 
-    <li>Night Mode automatically turns the display off during user-defined hours whenever nothing is playing, reducing power consumption and extending display lifespan, while also letting you sleep without annoying light sources.</li>
+        <li>Gaming dashboard with FPS, CPU, GPU and RTSS integration.</li>
 
-    <li>Adjustable View Area lets you resize the visible content to perfectly fit picture frames, custom enclosures, media furniture, or any creative installation.</li>
+        <li>Idle mode with artwork slideshows, clocks and visuals.</li>
 
-    <li>Kiosk Mode creates a dedicated appliance-like experience by hiding Android system elements.</li>
+        <li>Adaptive brightness tuned for real-world room environments.</li>
 
-    <li>Control Media Frame from any web browser on your local network and see changes instantly. Group multiple devices and sync settings between them.</li>
+        <li>Night Mode for automatic screen off scheduling.</li>
 
-    <li>No ads. No subscriptions. Just your content.</li>
+        <li>Custom view area scaling for frames and enclosures.</li>
 
-    <li>Designed with privacy in mind. Most integrations work entirely within your local network. No spying, no user data collection.</li>
-</ul>
+        <li>Kiosk Mode for a clean appliance-like experience.</li>
 
-<p><strong>...and more!</strong></p>
+        <li>Web-based control and multi-device sync.</li>
 
-<p>
-    <strong>Get it on Google Play Store:</strong><br>
-    <a href="https://play.google.com/store/apps/details?id=com.anonymous.mediaframe" target="_blank" rel="noopener noreferrer">
-        https://play.google.com/store/apps/details?id=com.anonymous.mediaframe
-    </a>
-</p>
+        <li>No ads. No subscriptions.</li>
+
+        <li>Privacy-first: mostly local network operation.</li>
+    </ul>
+
+    <!-- CTA -->
+    <div class="cta">
+        <p><strong>Get it on Google Play</strong></p>
+
+        <a href="https://play.google.com/store/apps/details?id=com.anonymous.mediaframe" target="_blank">
+            <img class="play-badge"
+                 src="https://play-lh.googleusercontent.com/jKrs9G1jvRRoAZdmlqBg0WKOteiEUgSxRDWqTeJL-4gZAfSkr0UjpmBUiu9mlRvtkq1PY-vHD45V5PPZ_2Wk=s96-rw"
+                 alt="Get it on Google Play">
+        </a>
+    </div>
+
+</div>
 
 </body>
 </html>
