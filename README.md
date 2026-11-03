@@ -1,35 +1,36 @@
-Media Frame transforms your tablet into a beautiful, customizable "Now Playing" display for your music, movies, TV shows, and gaming setup. Whether it's mounted on a wall, placed in a picture frame, or integrated into your media furniture, Media Frame brings your entertainment to life.
+# Media Frame — website
 
-Highlights
+The public introduction and download page for Media Frame:
+https://gripsoftapps.github.io/Media-Frame-Info/
 
-• Beautiful, fully customizable Now Playing display.
+Media Frame is available for Android tablets, phones and Android TV OS. The app is free to try for **14 days**, followed by a one-time purchase. This wording was confirmed by the developer on 2026-11-03 and takes precedence over older seven-day descriptions.
 
-• Large artwork, readable text, and fullscreen animations.
+## Site structure
 
-• Works with Roon, Spotify, Apple TV, Google Cast devices, WiiM, Home Assistant, Naim (experimental), and Eversolo (experimental).
+- `index.html`: accessible, English-first content, download links, integration details and FAQ. Core content and native expandable sections work without JavaScript.
+- `styles.css`: responsive layouts, dark olive/charcoal palette and warm accents.
+- `app.js`: Swedish translations, language selection and the six-image display-style gallery.
+- `assets/`: optimized WebP images and PNG icons derived from developer-supplied media.
 
-• Identifies what's playing using the built-in microphone (powered by ShazamKit)—perfect for vinyl lovers or just people who dont want to configure stuff!
+Swedish browsers start in Swedish; other browsers start in English. The language switch remembers a preference locally. Use `?lang=sv` or `?lang=en` to share a language-specific link. The canonical QR destination remains the root URL above.
 
-• Rich artwork and metadata for music, movies, and TV shows. Apple TV integration displays beautiful custom artwork together with information about the content you're watching.
+When adding copy, write the English text in HTML with a `data-i18n` key and add the same key to `swedish` in `app.js`. Gallery captions are maintained in the `looks` object.
 
-• Turn your tablet into a gaming dashboard with live FPS, CPU, GPU, and system telemetry using MSI Afterburner / RivaTuner Statistics Server (RTSS) integration.
+## Content
 
-• An elegant idle screen that still feels alive with decorative artwork, slideshows, clocks, and your own custom images.
+The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows real app screenshots. Detailed integrations and FAQs sit further down the page.
 
-• Custom Adaptive Brightness automatically adjusts the display to blend naturally into your room like a real picture frame. Fine-tune the behavior to perfectly match your environment under each specific lighting condition.
+Music Recognition uses a phone or tablet microphone and is not available in the Android TV version. Direct connections, controls, metadata and display features vary by source and device. Spotify is described through Last.fm scrobbling rather than promising direct Spotify sign-in in every build.
 
-• Night Mode automatically turns the display off during user-defined hours whenever nothing is playing, reducing power consumption and extending display lifespan. As well as letting you sleep without any annoying light sources.
+The YouTube channel is https://www.youtube.com/@MediaFrameApp.
+The Google Play listing is https://play.google.com/store/apps/details?id=com.anonymous.mediaframe.
+Support is MediaFrameApp@protonmail.com.
+Privacy information is linked to the existing Media-Frame-Legal site.
 
-• Adjustable View Area lets you resize the visible content to perfectly fit picture frames, custom enclosures, media furniture, or any creative installation.
+## Deployment and validation
 
-• Kiosk Mode creates a dedicated appliance-like experience by hiding Android system elements.
+This is a buildless static site. The existing `.github/workflows/static.yml` deploys the repository to GitHub Pages on pushes to `main`. No extra host, package installation or build is required.
 
-• Control Media Frame from any web browser on your local network and see changes instantly. Group multiple devices and sync settings between them!
+Before publishing, check `node --check app.js`, local asset/anchor references, both languages, all gallery options and expandable sections. Review narrow phone, tablet and desktop layouts. Prefer optimized, locally hosted images and preserve visible focus indicators and reduced-motion support.
 
-• No ads. No subscriptions. Just your content.
-
-• Designed with privacy in mind. Most integrations work entirely within your local network. No spying, no user data collection!
-
-...and more!
-
-Get it on Google Play Store : https://play.google.com/store/apps/details?id=com.anonymous.mediaframe
+The 2026-11-03 redesign was reviewed at 320, 390, 768, 1024 and desktop widths, with browser checks of language switching, all six gallery selections, keyboard operation of FAQ, and the three Google Play links.
