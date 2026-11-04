@@ -14,9 +14,9 @@ Media Frame is available for Android tablets, phones and Android TV OS. The app 
 
 Swedish browsers start in Swedish; other browsers start in English. The language switch remembers a preference locally. Use `?lang=sv` or `?lang=en` to share a language-specific link. The canonical QR destination remains the root URL above.
 
-When adding copy, write the English text in HTML with a `data-i18n` key and add the same key to `swedish` in `app.js`. Gallery captions are maintained in the `looks` object.
+When adding copy, write the English text in HTML with a `data-i18n` key and add the same key to `swedish` in `app.js`. Gallery captions are maintained in the `looks` object. When `app.js` changes, update its content-hash query in the HTML script URL so browsers fetch the current version.
 
-The gallery starts with CD & Case and advances through all nine styles every 5 seconds while its display is visible. Selecting a thumbnail resets the timer. Playback waits while the gallery is offscreen or the tab is hidden, and reduced-motion preferences disable automatic playback. There is no slideshow hint or pause/start control. Without JavaScript, the initial image and caption remain visible.
+The thumbnail order is the slideshow order: CD & Case, Reel-to-Reel, Vinyl, Retro-Cassette, Album-focused, CD Player, EQ Bars, Oscilloscope, and Vinyl & Cover. The gallery starts with the first thumbnail and advances every 5 seconds while its display is visible. Selecting a thumbnail resets the timer. Playback waits while the gallery is offscreen or the tab is hidden, and reduced-motion preferences disable automatic playback. There is no slideshow hint or pause/start control. Without JavaScript, the initial image and caption remain visible.
 
 ## Content
 

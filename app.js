@@ -126,9 +126,10 @@ const looks = {
   vinylCover: {src: "assets/vinyl-cover.webp", title: ["Vinyl & Cover", "Vinyl & omslag"], description: ["The feeling of a record pulled from its sleeve. A vinyl record peeks out behind a large album cover, with artist and track information in view.", "Känslan av en skiva som dras ur sitt fodral. En vinylskiva sticker fram bakom ett stort skivomslag, med artist och låtinformation väl synliga."]}
 };
 
-let selectedLook = "cd";
+// Thumbnail order is also the slideshow order and determines its first image.
+const lookOrder = Array.from(document.querySelectorAll("[data-look]"), (el) => el.dataset.look);
+let selectedLook = lookOrder[0];
 let language = "en";
-const lookOrder = Object.keys(looks);
 const slideshowDelay = 5000;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let galleryVisible = false;
