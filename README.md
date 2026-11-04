@@ -16,6 +16,8 @@ Swedish browsers start in Swedish; other browsers start in English. The language
 
 When adding copy, write the English text in HTML with a `data-i18n` key and add the same key to `swedish` in `app.js`. Gallery captions are maintained in the `looks` object.
 
+The gallery advances through all nine styles every 4.5 seconds while its display is visible. Selecting a thumbnail resets the timer; the pause/start control lets visitors hold a view. Playback waits while the gallery is offscreen or the tab is hidden. Reduced-motion preferences start the gallery paused. Without JavaScript, the initial image and caption remain visible and playback controls stay hidden.
+
 ## Content
 
 The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows nine real app screenshots, including EQ bars, an oscilloscope and vinyl with an album cover. A dedicated highlight explains music-video backgrounds behind themes and animations. The main feature list explains extensive theme customization and built-in settings sync across multiple devices. Detailed integrations and FAQs sit further down the page.
