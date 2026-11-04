@@ -55,7 +55,7 @@ const swedish = {
   looksTitle: "Lite nostalgi. Mycket personlighet.",
   looksIntro: "Från ett avskalat skivomslag till en snurrande vinyl eller rullbandspelare. Välj det uttryck som passar dig.",
   appScreenshot: "Direkt från appen",
-  galleryReelDescription: "En klassisk rullbandspelare med din musik i centrum. Skivomslaget blir en del av spelaren.",
+  galleryCdDescription: "Ett skivfodral och en CD ger albumen nytt liv. Matchande bilder av CD-skivan används när de finns.",
   galleryLabel: "Välj ett utseende",
   reel: "Rullbandspelare", vinyl: "Vinyl", cassette: "Retro-kassett", minimal: "Skivomslag", cdPlayer: "CD-spelare",
   eqBars: "EQ-staplar", oscilloscope: "Oscilloskop", vinylCover: "Vinyl & omslag",
@@ -126,7 +126,7 @@ const looks = {
   vinylCover: {src: "assets/vinyl-cover.webp", title: ["Vinyl & Cover", "Vinyl & omslag"], description: ["The feeling of a record pulled from its sleeve. A vinyl record peeks out behind a large album cover, with artist and track information in view.", "Känslan av en skiva som dras ur sitt fodral. En vinylskiva sticker fram bakom ett stort skivomslag, med artist och låtinformation väl synliga."]}
 };
 
-let selectedLook = "reel";
+let selectedLook = "cd";
 let language = "en";
 const lookOrder = Object.keys(looks);
 const slideshowDelay = 5000;
