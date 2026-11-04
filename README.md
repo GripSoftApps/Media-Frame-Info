@@ -3,13 +3,13 @@
 The public introduction and download page for Media Frame:
 https://gripsoftapps.github.io/Media-Frame-Info/
 
-Media Frame is available for Android tablets, phones and Android TV OS. The app is free to try for **14 days**, followed by a one-time purchase. This wording was confirmed by the developer on 2026-11-03 and takes precedence over older seven-day descriptions.
+Media Frame is available for Android tablets, phones and Android TV OS. The app is free to try for **7 days**, followed by a one-time purchase. The developer confirmed seven days on 2026-11-04 to match the app’s current trial duration; this supersedes the earlier fourteen-day wording.
 
 ## Site structure
 
 - `index.html`: accessible, English-first content, download links, integration details and FAQ. Core content and native expandable sections work without JavaScript.
 - `styles.css`: responsive layouts, dark olive/charcoal palette and warm accents.
-- `app.js`: Swedish translations, language selection and the six-image display-style gallery.
+- `app.js`: Swedish translations, language selection and the nine-image display-style gallery.
 - `assets/`: optimized WebP images and PNG icons derived from developer-supplied media.
 
 Swedish browsers start in Swedish; other browsers start in English. The language switch remembers a preference locally. Use `?lang=sv` or `?lang=en` to share a language-specific link. The canonical QR destination remains the root URL above.
@@ -18,7 +18,7 @@ When adding copy, write the English text in HTML with a `data-i18n` key and add 
 
 ## Content
 
-The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows real app screenshots. A dedicated highlight explains music-video backgrounds behind themes and animations. The main feature list explains extensive theme customization and built-in settings sync across multiple devices. Detailed integrations and FAQs sit further down the page.
+The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows nine real app screenshots, including EQ bars, an oscilloscope and vinyl with an album cover. A dedicated highlight explains music-video backgrounds behind themes and animations. The main feature list explains extensive theme customization and built-in settings sync across multiple devices. Detailed integrations and FAQs sit further down the page.
 
 Music Recognition uses a phone or tablet microphone and is not available in the Android TV version. Direct connections, controls, metadata and display features vary by source and device. Spotify is described through Last.fm scrobbling rather than promising direct Spotify sign-in in every build. Naim and Eversolo are separate integration entries. Google devices (Nest, Hub and supported streamers) appear under music as well as video. MSI Afterburner is presented as a live performance information display. The FAQ describes iOS / Apple support as planned, without a release date.
 
@@ -33,4 +33,4 @@ This is a buildless static site. The existing `.github/workflows/static.yml` dep
 
 Before publishing, check `node --check app.js`, local asset/anchor references, both languages, all gallery options and expandable sections. Review narrow phone, tablet and desktop layouts. Prefer optimized, locally hosted images and preserve visible focus indicators and reduced-motion support.
 
-The 2026-11-03 redesign was reviewed at 320, 390, 768, 1024 and desktop widths, with browser checks of language switching, all six gallery selections, keyboard operation of FAQ, and the three Google Play links.
+The 2026-11-03 redesign was reviewed at 320, 390, 768, 1024 and desktop widths, with browser checks of language switching, all gallery selections, keyboard operation of FAQ, and the three Google Play links.

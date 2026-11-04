@@ -31,7 +31,7 @@ const swedish = {
   heroDescription: "Ge musiken du älskar en egen skärm. Vackra omslag, artistbilder, animationer och matchande musikvideor gör lyssningshörnan till något alldeles extra.",
   getPlay: "Hämta på Google Play",
   watch: "Se appen i användning",
-  trialNote: "Gratis i 14 dagar. Därefter ett engångsköp. Ingen prenumeration.",
+  trialNote: "Gratis i 7 dagar. Därefter ett engångsköp. Ingen prenumeration.",
   heroAlt: "Media Frame visar samma musik på en Android-mobil och en inramad surfplatta vid en stereo",
   realSetup: "En riktig anläggning. Ett nytt sätt att se musiken.",
   strip1: "Ge din Android-skärm ett nytt liv.",
@@ -58,7 +58,8 @@ const swedish = {
   galleryReelDescription: "En klassisk rullbandspelare med din musik i centrum. Skivomslaget blir en del av spelaren.",
   galleryLabel: "Välj ett utseende",
   reel: "Rullbandspelare", vinyl: "Vinyl", cassette: "Retro-kassett", minimal: "Skivomslag", cdPlayer: "CD-spelare",
-  galleryNote: "Riktiga skärmbilder från appen. Upptäck även VU-mätare, EQ-staplar, oscilloskop och spektrum-vattenfall. Bilderna visar animationsstilarna; tryck på en stil för att se dess utseende.",
+  eqBars: "EQ-staplar", oscilloscope: "Oscilloskop", vinylCover: "Vinyl & omslag",
+  galleryNote: "Riktiga skärmbilder från appen. Upptäck även VU-mätare och spektrum-vattenfall. Bilderna visar animationsstilarna; tryck på en stil för att se dess utseende.",
   homeEyebrow: "En del av ditt hem",
   homeTitle: "Mer än en skärm. En del av rummet.",
   homeIntro: "På ett stativ, i en tavelram eller bredvid din favoritanläggning. Låt skärmen ta plats eller smälta in.",
@@ -101,12 +102,12 @@ const swedish = {
   faq4Q: "Är Media Frame en musikspelare?",
   faq4A: "Media Frame är en skärm för det du lyssnar eller tittar på. Din befintliga anläggning spelar musiken. Media Frame tillför bilder, information och visualiseringar, med uppspelningskontroller för integrationer som stöds. Matchande musikvideobakgrunder är valfria och beror på tillgänglighet.",
   faq5Q: "Hur fungerar provperioden?",
-  faq5A: "Ladda ned appen och prova gratis i 14 dagar. Därefter låser ett engångsköp upp fortsatt användning. Ingen prenumeration eller automatisk debitering. Aktuellt pris visas i appen / Google Play.",
+  faq5A: "Ladda ned appen och prova gratis i 7 dagar. Därefter låser ett engångsköp upp fortsatt användning. Ingen prenumeration eller automatisk debitering. Aktuellt pris visas i appen / Google Play.",
   faq6Q: "Kan jag ändra utseendet från min mobil?",
   faq6A: "Ja. Aktivera webbstyrning i Media Frame och öppna adressen som visas i appen med en webbläsare på ditt lokala nätverk. Ändra layout och inställningar från mobil, surfplatta eller dator.",
   downloadEyebrow: "Inför nästa lyssningsstund",
   downloadTitle: "Ge musiken en plats på skärmen.",
-  downloadText: "Upptäck Media Frame i din egen anläggning. Prova gratis i 14 dagar.",
+  downloadText: "Upptäck Media Frame i din egen anläggning. Prova gratis i 7 dagar.",
   platforms: "Android-surfplattor, mobiler & Android TV OS · Engångsköp efter provperioden",
   footerNav: "Mer information",
   support: "Support", privacy: "Integritet", madeIn: "Utvecklad i Sverige",
@@ -119,7 +120,10 @@ const looks = {
   cd: {src: "assets/cd-case.webp", title: ["CD & Case", "CD & Case"], description: ["A jewel case and disc bring your albums to life. Matching disc artwork is used when available.", "Ett skivfodral och en CD ger albumen nytt liv. Matchande bilder av CD-skivan används när de finns."]},
   cassette: {src: "assets/cassette.webp", title: ["Retro-Cassette", "Retro-kassett"], description: ["All the charm of a mixtape. A retro cassette with your music’s artwork and track information.", "Mixtapens charm i ny tappning. En retrokassett med musikens omslag och låtinformation."]},
   minimal: {src: "assets/album-art.webp", title: ["Album-focused", "Skivomslag"], description: ["Keep it simple. Artwork, artist and track information, with room for the music to breathe.", "Avskalat och tydligt. Omslag, artist och låtinformation som låter musiken ta plats."]},
-  player: {src: "assets/cd-player.webp", title: ["CD Player", "CD-spelare"], description: ["A full-screen CD player inspired by classic hi-fi. The disc takes centre stage.", "En CD-spelare i helskärm med inspiration från klassisk hi-fi. Här får skivan huvudrollen."]}
+  player: {src: "assets/cd-player.webp", title: ["CD Player", "CD-spelare"], description: ["A full-screen CD player inspired by classic hi-fi. The disc takes centre stage.", "En CD-spelare i helskärm med inspiration från klassisk hi-fi. Här får skivan huvudrollen."]},
+  eq: {src: "assets/eq-bars.webp", title: ["EQ Bars", "EQ-staplar"], description: ["A splash of colour for your listening corner. Bright EQ bars share the screen with album artwork and track information.", "Färg som lyfter lyssningshörnan. Färgstarka EQ-staplar delar skärmen med skivomslag och låtinformation."]},
+  oscilloscope: {src: "assets/oscilloscope.webp", title: ["Oscilloscope", "Oscilloskop"], description: ["Glowing blue waveforms frame your album artwork. A striking look with the artist and track clearly in focus.", "Lysande blå vågformer ramar in skivomslaget. Ett uttrycksfullt utseende med artist och låt tydligt i fokus."]},
+  vinylCover: {src: "assets/vinyl-cover.webp", title: ["Vinyl & Cover", "Vinyl & omslag"], description: ["The feeling of a record pulled from its sleeve. A vinyl record peeks out behind a large album cover, with artist and track information in view.", "Känslan av en skiva som dras ur sitt fodral. En vinylskiva sticker fram bakom ett stort skivomslag, med artist och låtinformation väl synliga."]}
 };
 
 let selectedLook = "reel";
@@ -148,8 +152,8 @@ function setLanguage(next, persist = false) {
   document.querySelectorAll("[data-language]").forEach((el) => el.setAttribute("aria-pressed", String(el.dataset.language === next)));
   document.title = next === "sv" ? "Media Frame — Din musik. I blickfånget." : "Media Frame — Your music. On display.";
   document.querySelector('meta[name="description"]').content = next === "sv"
-    ? "Gör din Android-surfplatta, mobil eller TV till en snygg Nu spelas-skärm. Låt appen känna igen musik eller anslut dina spelare. Prova gratis i 14 dagar."
-    : "Turn your Android tablet, phone or TV into a beautiful Now Playing display. Recognize music with your microphone or connect your players. Try free for 14 days.";
+    ? "Gör din Android-surfplatta, mobil eller TV till en snygg Nu spelas-skärm. Låt appen känna igen musik eller anslut dina spelare. Prova gratis i 7 dagar."
+    : "Turn your Android tablet, phone or TV into a beautiful Now Playing display. Recognize music with your microphone or connect your players. Try free for 7 days.";
   renderGallery();
   if (persist) {
     try { localStorage.setItem("media-frame-language", next); } catch { /* Optional preference only. */ }

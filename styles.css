@@ -507,13 +507,17 @@ h1 em {
 }
 .gallery-options {
   display:grid;
-  grid-template-columns:repeat(6,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:13px;
   margin-top:20px
 }
 .gallery-option {
   position:relative;
-  padding:7px 7px 12px;
+  display:grid;
+  grid-template-columns:minmax(0,120px) minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+  padding:7px;
   border-radius:7px;
   border:1px solid transparent;
   background:transparent;
@@ -533,7 +537,7 @@ h1 em {
 .gallery-option>span {
   display:block;
   font-size:11px;
-  margin-top:11px;
+  margin-top:0;
   color:var(--muted)
 }
 .gallery-option[aria-pressed=true] {
@@ -1194,6 +1198,7 @@ details[open]>summary>.detail-toggle {
     margin-top:14px
   }
   .gallery-option {
+    display:block;
     padding:5px 5px 10px
   }
   .gallery-option>span {
