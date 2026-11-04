@@ -18,9 +18,9 @@ When adding copy, write the English text in HTML with a `data-i18n` key and add 
 
 ## Content
 
-The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows real app screenshots. Detailed integrations and FAQs sit further down the page.
+The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows real app screenshots. A dedicated highlight explains music-video backgrounds behind themes and animations. The main feature list explains extensive theme customization and built-in settings sync across multiple devices. Detailed integrations and FAQs sit further down the page.
 
-Music Recognition uses a phone or tablet microphone and is not available in the Android TV version. Direct connections, controls, metadata and display features vary by source and device. Spotify is described through Last.fm scrobbling rather than promising direct Spotify sign-in in every build.
+Music Recognition uses a phone or tablet microphone and is not available in the Android TV version. Direct connections, controls, metadata and display features vary by source and device. Spotify is described through Last.fm scrobbling rather than promising direct Spotify sign-in in every build. Naim and Eversolo are separate integration entries. Google devices (Nest, Hub and supported streamers) appear under music as well as video. MSI Afterburner is presented as a live performance information display. The FAQ describes iOS / Apple support as planned, without a release date.
 
 The YouTube channel is https://www.youtube.com/@MediaFrameApp.
 The Google Play listing is https://play.google.com/store/apps/details?id=com.anonymous.mediaframe.
