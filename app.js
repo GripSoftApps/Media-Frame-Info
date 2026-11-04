@@ -57,7 +57,6 @@ const swedish = {
   appScreenshot: "Direkt från appen",
   galleryReelDescription: "En klassisk rullbandspelare med din musik i centrum. Skivomslaget blir en del av spelaren.",
   galleryLabel: "Välj ett utseende",
-  slideshowHint: "Ett nytt utseende var 4,5 sekund. Du kan också välja själv nedan.",
   reel: "Rullbandspelare", vinyl: "Vinyl", cassette: "Retro-kassett", minimal: "Skivomslag", cdPlayer: "CD-spelare",
   eqBars: "EQ-staplar", oscilloscope: "Oscilloskop", vinylCover: "Vinyl & omslag",
   galleryNote: "Riktiga skärmbilder från appen. Upptäck även VU-mätare och spektrum-vattenfall. Bilderna visar animationsstilarna; tryck på en stil för att se dess utseende.",
@@ -130,42 +129,32 @@ const looks = {
 let selectedLook = "reel";
 let language = "en";
 const lookOrder = Object.keys(looks);
-const slideshowDelay = 4500;
+const slideshowDelay = 5000;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-let slideshowPaused = reducedMotion.matches;
 let galleryVisible = false;
 let slideshowTimer;
 
-function renderPlayback() {
-  const index = language === "sv" ? 1 : 0;
-  document.getElementById("gallery-playback-label").textContent = slideshowPaused
-    ? ["Start slideshow", "Starta bildspel"][index]
-    : ["Pause slideshow", "Pausa bildspel"][index];
-  document.getElementById("gallery-playback-icon").textContent = slideshowPaused ? "▶" : "Ⅱ";
-  // Avoid announcing every automatic change to screen-reader users.
-  document.querySelector(".showcase-caption").setAttribute("aria-live", slideshowPaused ? "polite" : "off");
-}
-
 function scheduleSlideshow() {
   window.clearTimeout(slideshowTimer);
-  if (slideshowPaused || document.hidden || !galleryVisible) return;
+  if (reducedMotion.matches || document.hidden || !galleryVisible) return;
   slideshowTimer = window.setTimeout(() => {
     selectedLook = lookOrder[(lookOrder.indexOf(selectedLook) + 1) % lookOrder.length];
-    renderGallery();
+    renderGallery(true);
     scheduleSlideshow();
   }, slideshowDelay);
 }
 
-function renderGallery() {
+function renderGallery(automatic = false) {
   const look = looks[selectedLook];
   const index = language === "sv" ? 1 : 0;
   const image = document.getElementById("gallery-image");
+  // Announce manual selections, without announcing every automatic change.
+  document.querySelector(".showcase-caption").setAttribute("aria-live", automatic ? "off" : "polite");
   image.src = look.src;
   image.alt = "Media Frame — " + look.title[index];
   document.getElementById("gallery-title").textContent = look.title[index];
   document.getElementById("gallery-description").textContent = look.description[index];
   document.querySelectorAll("[data-look]").forEach((el) => el.setAttribute("aria-pressed", String(el.dataset.look === selectedLook)));
-  renderPlayback();
   // Warm the next image's cache before its turn without loading the whole gallery.
   const nextImage = new Image();
   nextImage.src = looks[lookOrder[(lookOrder.indexOf(selectedLook) + 1) % lookOrder.length]].src;
@@ -201,17 +190,8 @@ document.querySelectorAll("[data-look]").forEach((el) => el.addEventListener("cl
   renderGallery();
   scheduleSlideshow();
 }));
-document.getElementById("gallery-playback").addEventListener("click", () => {
-  slideshowPaused = !slideshowPaused;
-  renderPlayback();
-  scheduleSlideshow();
-});
 document.addEventListener("visibilitychange", scheduleSlideshow);
-reducedMotion.addEventListener("change", (event) => {
-  if (event.matches) slideshowPaused = true;
-  renderPlayback();
-  scheduleSlideshow();
-});
+reducedMotion.addEventListener("change", scheduleSlideshow);
 document.getElementById("year").textContent = new Date().getFullYear();
 
 let savedLanguage;
@@ -220,7 +200,6 @@ const requestedLanguage = new URLSearchParams(location.search).get("lang");
 const validLanguage = (value) => value === "sv" || value === "en";
 setLanguage(validLanguage(requestedLanguage) ? requestedLanguage : validLanguage(savedLanguage) ? savedLanguage : navigator.language.toLowerCase().startsWith("sv") ? "sv" : "en");
 
-document.querySelector(".gallery-toolbar").hidden = false;
 if ("IntersectionObserver" in window) {
   const galleryObserver = new IntersectionObserver(([entry]) => {
     galleryVisible = entry.isIntersecting;

@@ -16,7 +16,7 @@ Swedish browsers start in Swedish; other browsers start in English. The language
 
 When adding copy, write the English text in HTML with a `data-i18n` key and add the same key to `swedish` in `app.js`. Gallery captions are maintained in the `looks` object.
 
-The gallery advances through all nine styles every 4.5 seconds while its display is visible. Selecting a thumbnail resets the timer; the pause/start control lets visitors hold a view. Playback waits while the gallery is offscreen or the tab is hidden. Reduced-motion preferences start the gallery paused. Without JavaScript, the initial image and caption remain visible and playback controls stay hidden.
+The gallery advances through all nine styles every 5 seconds while its display is visible. Selecting a thumbnail resets the timer. Playback waits while the gallery is offscreen or the tab is hidden, and reduced-motion preferences disable automatic playback. There is no slideshow hint or pause/start control. Without JavaScript, the initial image and caption remain visible.
 
 ## Content
 
