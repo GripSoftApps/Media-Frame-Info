@@ -26,6 +26,7 @@ const swedish = {
   releaseQualityText: "Bildkvalitetsprofiler, fler typsnitt, justerade proportioner för CD & Case och mjukare skärmsläckarövergångar hjälper Media Frame att anpassas till olika skärmar och enheter.",
   releaseAvailability: "Tillgängligheten varierar mellan distributioner och installerade versioner. Cambridge Audio är experimentell och ingår för närvarande i den senaste Fleet-APK:n; den publika Play Store-versionen och Android TV-paketet har ännu inte uppdaterats till detta bygge.",
   cambridgeWordmark: "Cambridge Audio",
+  sourceSummary: "Roon, Sonos, Google devices, Cambridge Audio & more",
   sourceCambridgeTitle: "Cambridge Audio (experimentell)",
   sourceCambridge: "Anslut en kompatibel StreamMagic-spelare på ditt lokala nätverk med IP-adress eller värdnamn. Visa Now Playing-information, omslag, uppspelningsposition och längd samt använd Play, Pause, Next och Previous. Tillgängligheten beror på appversionen.",
   googleDevices: "Google-enheter",
