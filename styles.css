@@ -1299,3 +1299,41 @@ details[open]>summary>.detail-toggle {
     animation:none!important
   }
 }
+
+
+/* Release notes */
+.release-section { scroll-margin-top: 28px; }
+.release-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 30px 34px;
+}
+.release-version {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.release-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 34px;
+}
+.release-list li { display: grid; gap: 8px; align-content: start; }
+.release-list strong { color: #e8e9df; font-size: 14px; }
+.release-list span { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.release-note {
+  border-top: 1px solid var(--line);
+  margin-top: 26px;
+  padding-top: 18px;
+  color: #a0a694;
+  font-size: 11px;
+  line-height: 1.8;
+}
+@media(max-width:800px) { .release-list { grid-template-columns: 1fr; gap: 20px; } }
+@media(max-width:560px) { .release-card { padding: 23px; } }
