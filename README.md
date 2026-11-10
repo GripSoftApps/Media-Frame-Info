@@ -7,7 +7,7 @@ Media Frame is available for Android tablets, phones and Android TV OS. The app 
 
 ## Site structure
 
-- `index.html`: accessible, English-first content, download links, integration details and FAQ. Core content and native expandable sections work without JavaScript.
+- `index.html`: accessible, English-first content, download links, a dated What's New section, integration details and FAQ. Core content and native expandable sections work without JavaScript.
 - `styles.css`: responsive layouts, dark olive/charcoal palette and warm accents.
 - `app.js`: Swedish translations, language selection and the nine-image display-style gallery.
 - `assets/`: optimized WebP images and PNG icons derived from developer-supplied media.
@@ -20,9 +20,9 @@ The thumbnail order is the slideshow order: CD & Case, Reel-to-Reel, Vinyl, Retr
 
 ## Content
 
-The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The gallery shows nine real app screenshots, including EQ bars, an oscilloscope and vinyl with an album cover. A dedicated highlight explains music-video backgrounds behind themes and animations. The main feature list explains extensive theme customization and built-in settings sync across multiple devices. Detailed integrations and FAQs sit further down the page.
+The first visit introduces the display, gives a clear Google Play download link, and explains the two setup paths: Music Recognition (“Lyssna själv!”) and connected sources. The What's New section is maintained in English and Swedish and states build-specific availability; Cambridge Audio StreamMagic is explicitly marked experimental and not yet present in the public Play Store or current Android TV package. The gallery shows nine real app screenshots, including EQ bars, an oscilloscope and vinyl with an album cover. A dedicated highlight explains music-video backgrounds behind themes and animations. The main feature list explains extensive theme customization and built-in settings sync across multiple devices. Detailed integrations and FAQs sit further down the page.
 
-Music Recognition uses a phone or tablet microphone and is not available in the Android TV version. Direct connections, controls, metadata and display features vary by source and device. Spotify is described through Last.fm scrobbling rather than promising direct Spotify sign-in in every build. Naim and Eversolo are separate integration entries. Google devices (Nest, Hub and supported streamers) appear under music as well as video. MSI Afterburner is presented as a live performance information display. The FAQ describes iOS / Apple support as planned, without a release date.
+Music Recognition uses a phone or tablet microphone and is not available in the Android TV version. Direct connections, controls, metadata and display features vary by source and device. Spotify is described through Last.fm scrobbling rather than promising direct Spotify sign-in in every build. Naim, Eversolo and experimental Cambridge Audio StreamMagic are separate integration entries. Google devices (Nest, Hub and supported streamers) appear under music as well as video. MSI Afterburner is presented as a live performance information display. The FAQ describes iOS / Apple support as planned, without a release date.
 
 The YouTube channel is https://www.youtube.com/@MediaFrameApp.
 The Google Play listing is https://play.google.com/store/apps/details?id=com.anonymous.mediaframe.
